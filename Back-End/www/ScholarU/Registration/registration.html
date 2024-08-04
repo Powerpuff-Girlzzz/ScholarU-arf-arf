@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="registration.css">
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.4/dist/tesseract.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+</head>
+
+<body>
+    <h1>Let's get you started!</h1>
+
+    <div id="page" class="site">
+        <div class="container">
+            <div class="form-box">
+                <div class="progress">
+                    <div class="logo"><a href="#"><span>Scholar</span>U</a></div>
+                    <ul class="progress-steps">
+                        <li class="step active">
+                            <span>1</span>
+                            <p>Personal<br><span>Step 1</span></p>
+                        </li>
+                        <li class="step">
+                            <span>2</span>
+                            <p>Validate<br><span>Step 2</span></p>
+                        </li>
+                        <li class="step">
+                            <span>3</span>
+                            <p>College<br><span>Step 3</span></p>
+                        </li>
+                        <li class="step">
+                            <span>4</span>
+                            <p>Security<br><span>Step 4</span></p>
+                        </li>
+                        <li class="step">
+                            <span>5</span>
+                            <p>T and C<br><span>Step 5</span></p>
+                        </li>
+                    </ul>
+                    <p class="link-login">Already have an account? <a
+                            href="/Front-End-LandingPage-main/login/login.html">Login</a></p>
+                </div>
+
+                <form action="">
+                    <div class="form-one form-step active">
+                        <div class="bg-svg"></div>
+                        <h2>Personal</h2>
+                        <p>Enter your Personal Information including your Contact Information</p>
+                        <div>
+                            <label>First Name</label>
+                            <input type="text" placeholder="e.g. Juan">
+                        </div>
+                        <div>
+                            <label>Last Name</label>
+                            <input type="text" placeholder="e.g. Dela Cruz">
+                        </div>
+                        <div class="birth">
+                            <label>Date of Birth</label>
+                            <input type="date" name="DOB" id="DOB">
+                        </div>
+
+                        <div>
+                            <label>Phone</label>
+                            <input type="tel" placeholder="+62xxxxxxxxx">
+                        </div>
+                        <div>
+                            <label>Address</label>
+                            <input type="text" placeholder="Street Address">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Building">
+                        </div>
+                        <div>
+                            <label>City</label>
+                            <input type="text" placeholder="City">
+                        </div>
+                        <div>
+                            <label>Province</label>
+                            <input type="text" placeholder="Province">
+                        </div>
+                        <div>
+                            <label>Zip Code</label>
+                            <input type="text" placeholder="Zip Code">
+                        </div>
+                    </div>
+
+                    <div class="form-two form-step">
+                        <div class="bg-svg"></div>
+                        <h2>Optical Character Recognition</h2>
+                        <p>Upload neccessary file/s needed</p>
+                        <div>
+                            <label for="cor">Certifcate of Registration</label>
+                            <input type="file" name="cor" id="cor" accept="application/pdf,image/*">
+                        </div>
+                        <div id="preview"></div>
+                        <div id="ocr-result"></div>
+
+                    </div>
+
+                    <div class="form-three form-step">
+                        <div class="bg-svg"></div>
+                        <h2>School</h2>
+                        <p>Enter school related information</p>
+                        <div>
+                            <label>Student Number</label>
+                            <input type="number" placeholder="Student Number" min="1">
+                        </div>
+                        <div>
+                            <label>Program</label>
+                            <input type="text" placeholder="e.g Bachelor of Science in Information Systems">
+                        </div>
+                        <div>
+                            <label>Major</label>
+                            <input type="text" placeholder="Major">
+                        </div>
+                        <div>
+                            <label>College</label>
+                            <input type="text" placeholder="e.g College of Computer Studies">
+                        </div>
+                        <div>
+                            <label>Year & Section</label>
+                            <input type="text" placeholder="Year & Section">
+                        </div>
+                    </div>
+
+                    <div class="form-four form-step">
+                        <div class="bg-svg"></div>
+                        <h2>Security</h2>
+                        <p>Set-up your Password</p>
+                        <div>
+                            <label>Email</label>
+                            <input type="email" placeholder="Email Address">
+                        </div>
+                        <div>
+                            <label>Username</label>
+                            <input type="text" placeholder="Username">
+                        </div>
+                        <div>
+                            <label>Password</label>
+                            <input type="password" placeholder="Password" required required
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" title="Must contain at least At least 1 special character (e.g., @, #, $, %, ~), 
+                                At least 1 number, 
+                                At least 1 upper and 1 lowercase letters, and  
+                                10 – 16 characters ">
+                        </div>
+                        <div>
+                            <input type="password" placeholder="Confirm Password" required required
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least At least 1 special character (e.g., @, #, $, %, ~), 
+                                At least 1 number, 
+                                At least 1 upper and 1 lowercase letters, and  
+                                10 – 16 characters ">
+                        </div>
+
+                    </div>
+
+                    <div class="form-five form-step">
+                        <div class="bg-svg"></div>
+                        <h2>Terms and Conditions</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit cum, ullam est et
+                            recusandae qui? Non voluptatem ullam ipsum corrupti ducimus laborum maiores reiciendis magni
+                            laboriosam. Velit, voluptates. Eligendi, quibusdam?</p>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                            <label>I agree to the terms and conditions</label>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn-prev" type="button" disabled>Back</button>
+                        <button class="btn-next" type="button">Next Step</button>
+                        <button class="btn-submit" type="submit" style="display: none;">Submit</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        Copyright © 2024 ScholarU.
+    </footer>
+    <script src="registration.js"></script>
+</body>
+
+</html>

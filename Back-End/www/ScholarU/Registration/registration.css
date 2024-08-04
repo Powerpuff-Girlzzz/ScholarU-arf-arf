@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,::before, ::after{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', 'Noto Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #fff;
+    background: linear-gradient(#800000, #DCAE96);
+    min-height: 100vh;
+}
+
+body h1{
+    font-weight: 800;
+    padding: 10px;
+    text-align: left;
+    color: #DCAE96;
+    margin: 10px 10px 10px 10px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+h1,h2,h3{
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 0.5em;
+    color: #fff;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+.form-box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
+    border: none;
+    border-radius: 15px;
+    background-color: #DCAE96;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    overflow: hidden;
+}
+
+.form-step{
+    display: none;
+}
+
+.form-step.active{
+    display: block;
+}
+
+.form-box .progress{
+    position: relative;
+    padding: 1em;   
+}
+
+.logo{
+    font-size: 1.75em;
+    font-weight: 800;
+    color: #C57951;
+    padding: 40px 48px;
+    text-align: center;
+}
+
+.logo span{
+    color: #800000;
+}
+
+.progress ul.progress-steps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.progress ul.progress-steps li{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+}
+.progress ul.progress-steps li > span{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1em;
+    border-radius: 50%;
+    background-color: #C57951;
+    z-index: 1;
+}
+
+.progress ul.progress-steps li.active > span{
+    color: #800000;
+    background-color: #C57951;
+    border: 2px solid #800000;   
+    z-index: 1;
+}
+
+.progress ul.progress-steps li p span{
+    font-size: 12px;
+    color: #fff;
+    display: none;
+}
+
+.progress ul li p{
+    position: absolute;
+    top: -2em;
+    font-size: 12px;
+
+}
+.progress .link-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress .link-login a{
+    color: #800000;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.progress .link-login a:hover{
+    text-decoration: underline;
+}
+
+.form-box form{
+    width: 100%;
+    padding: 3em 1em;
+    background: #800000;
+    border-radius: 30px 30px 15px 15px;
+}
+
+form > div{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form > div p {
+    color: #DCAE96;
+    margin-bottom: 2em;
+}
+
+form > div > div:not(.checkbox){
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+form :where(input){
+    height: 40px;
+    padding: 0 1em;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid #DCAE96;
+    background: transparent;
+}
+
+form label{
+    font-size: 12px;
+    margin-bottom: 0.5em;
+    font-weight: 300;
+}
+
+form .checkbox input{
+    height: auto;
+}
+
+form > div:not(.btn-group){
+    display: none;
+    -webkit-animation: fadeIn .75s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fadeIn .75s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(10%);
+        transform: translateY(10%);
+    }
+    10%{
+        opacity: 0;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+form > div.active{
+    display: block;
+}
+
+form > div .bg-svg{
+    width: 60px;
+    height: 50px;
+    
+}
+
+form > .form-one .bg-svg{
+    background: url(person.svg);
+    background-repeat: no-repeat;
+}
+
+form > .form-two .bg-svg{
+    background: url(ocr.svg);
+    background-repeat: no-repeat;
+}
+
+form > .form-three .bg-svg{
+    background: url(school.svg);
+    background-repeat: no-repeat;
+}
+
+form > .form-four .bg-svg{
+    background: url(security.svg);
+    background-repeat: no-repeat;
+}
+form > .form-five .bg-svg{
+    background: url(t&c.svg);
+    background-repeat: no-repeat;
+}
+
+
+.btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.btn-group [class*="btn-"] {
+    background-color: #DCAE96;
+    color: #800000;
+    padding: 1em 2.5em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    -webkit-transition: background-color .75s ease-out;
+    transition: background-color .75s ease-out;
+}
+
+.btn-group [class*="btn-"]:disabled {
+    background-color: #C57951;
+    border: none;
+    cursor: text;
+}
+
+.btn-group [class*="btn-"]:hover:not(:disabled){
+    background-color: #8C4F2F;
+    border: none;
+}
+
+.btn-group .btn-submit,
+.form-three.active ~ .btn-group .btn-next{
+    display: none;
+}
+
+.form-three.active ~ .btn-group .btn-submit{
+    display: block;
+}
+
+.form-three.active ~ .btn-group {
+    justify-content: space-between;
+}
+
+::placeholder{
+    color: #fff;
+}
+
+input{
+    color: #fff;
+}
+
+textarea:focus, input:focus {
+    color: #fff;
+}
+
+input[type="file"]::file-selector-button {
+    border: none;
+    padding: 0.2em 0.4em;
+    border-radius: 10px;
+    background-color: #DCAE96;
+    margin-top: 8px;
+    transition: .5s ease;
+    color: #800000;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover{
+    background-color: #C57951;
+}
+
+input[type="number"]{
+    color: #fff;
+}
+
+#footer {
+    background-color: transparent;
+    color: #800000;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    font-size: 16px;
+}
+
+@media(min-width: 768px){
+    .form-box{
+        flex-direction: row;
+    }
+
+    .form-box .progress{
+        flex: 1 0 35%;
+        min-width: 300px;
+        padding: 3em;
+    }
+
+    .logo{
+        margin: -48px -48px 48px;
+    }
+
+    .progress ul.progress-steps{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .progress ul.progress-steps li:not(:last-child)::before{
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 30px;
+        width: 2px;
+        height: 65px;
+        background-color: #800000;
+    }
+
+    .form-box form{
+        padding: 3em;
+        border-radius: 0 15px 15px 0;
+    }
+
+    .progress ul li p{
+        position: relative;
+        top: auto;
+        font-size: inherit;
+    }
+
+    .progress ul.progress-steps li p span{
+        display: block;
+    }
+}
+
+@media(min-width: 768px){
+    .form-box{
+        flex-direction: row;
+    }
+
+    .form-box .progress{
+        flex: 1 0 35%;
+        min-width: 300px;
+        padding: 3em;
+    }
+
+    .logo{
+        margin: -48px -48px 48px;
+    }
+
+    .progress ul.progress-steps{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .progress ul.progress-steps li:not(:last-child)::before{
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 30px;
+        width: 2px;
+        height: 65px;
+        background-color: #800000;
+    }
+
+    .form-box form{
+        padding: 3em;
+        border-radius: 0 15px 15px 0;
+    }
+
+    .progress ul li p{
+        position: relative;
+        top: auto;
+        font-size: inherit;
+    }
+
+    .progress ul.progress-steps li p span{
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .form-box {
+        flex-direction: column;
+        margin-top: 3em;
+    }
+
+    .form-box .progress {
+        flex: 1 0 auto;
+        min-width: auto;
+        padding: 2em;
+    }
+
+    .form-box form {
+        padding: 2em;
+        border-radius: 15px;
+    }
+
+    .logo {
+        margin: 0;
+        padding: 20px; 
+    }
+
+    .progress ul.progress-steps li:not(:last-child)::before {
+        left: 50%; 
+        transform: translateX(-50%);
+        width: 1px;
+        height: 50px; 
+    }
+
+    .progress ul.progress-steps li, p > span{
+       display: none;
+    }
+
+    #footer {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+}

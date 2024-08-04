@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body>
+        <header>
+            <h2 class="logo">ScholarU</h2>
+        <nav>
+            <input type="checkbox" id="sidebar-active">
+            <label for="sidebar-active" class="open-sidebar-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </label>
+    
+            <label for="sidebar-active" id="overlay"></label>
+            <div class="links-container">
+                <label for="sidebar-active" class="close-sidebar-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                </label>
+    
+                <a href="/landing/landing.html" class="home-link">Home</a>
+                <a href="#">About</a>
+                <a href="#">Features</a>
+                <a href="#">Contact Us</a>
+                <a href="/login/login.html">Login</a>
+            </div>
+        </nav>
+        </header>
+          
+            <div class="wrapper">
+                <span class="icon-close">
+                    <ion-icon name="close-circle-outline"></ion-icon>
+                </span>
+    
+                <div class="form-box login">
+                    <h2>Login</h2>
+                    <form action="#">
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                            <input type="email" id="email" required autocomplete="both">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock"></ion-icon></span>
+                            <input type="password" id="password">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label for="rmbrmeCheckbox"><input type="checkbox" id="rmbrmeCheckbox">
+                            Remember Me</label>
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="btn">Login</button>
+                        <div class="login-register">
+                            <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                        </div>
+                    </form>
+                </div>
+    
+                <div class="form-box register">
+                    <h2>Register</h2>
+                    <form action="#">
+                        <div class="input-box">
+                            <span class="icon">
+                                <ion-icon name="person"></ion-icon>
+                            </span>
+                            <input type="text" id="username" required autocomplete="both">
+                            <label for="username">Username</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon">
+                                <ion-icon name="mail"></ion-icon>
+                            </span>
+                            <input type="email" id="emailReg" required>
+                            <label for="emailReg">Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock"></ion-icon></span>
+                            <input type="password" id="passwordReg" required>
+                            <label for="passwordReg">Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label for="termsCheckbox"><input type="checkbox" id="termsCheckbox">I agree to
+                                the terms and conditions 
+                            </label>
+                        </div>
+                        <button type="submit" class="btn">Register</button>
+                        <div class="login-register">
+                            <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                        </div>
+                    </form>
+                </div>
+    
+            </div>
+            <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Noto sans', sans-serif;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#800000, #DCAE96);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    background: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo{
+    font-size: 2rem;
+    color: #fff;
+    user-select: none;
+}
+
+nav{
+    height: 60px;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.links-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav a{
+    position: relative;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 2rem;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: #DCAE96;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+nav a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+nav .home-link{
+    margin-right: 10;
+}
+
+nav svg{
+    fill: #fff;
+}
+
+#sidebar-active{
+    display: none;
+}
+
+.open-sidebar-btn, .close-sidebar-btn{
+    display: none;
+}
+
+nav .btnLogin{
+    width: 8rem;
+    height: 2.5rem;
+    background: transparent;
+    border: 2px solid #DCAE96;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 2rem;
+    transition: .5s;
+}
+
+nav .btnLogin:hover{
+    background: #DCAE96;
+    color: #fff;
+}
+
+
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    border: 2px solid #DCAE96;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+
+.wrapper.active-popup{
+    transform: scale(1);
+}
+
+.wrapper.active{
+    height: 520px;
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form-box.login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login{
+    transform: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #DCAE96;
+    font-size: 2em;
+    color: #800000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form-box  h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #800000;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #DCAE96;
+    font-weight: 500px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 150;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #800000;
+    line-height: 57px;
+}
+
+.remember-forgot{
+    font-size: .9em;
+    color: #DCAE96;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input{
+    accent-color: hsl(215, 93%, 52%);
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: #800000;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background: #800000;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn:hover{
+    background: #AE0000;
+}
+
+.btn:active{
+    background: #DC0000;
+}
+
+.login-register{
+    font-size: .9em;
+    color: #DCAE96;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a{
+    color: #800000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
+}
+
+
+@media (max-width: 991px){
+    .links-container{
+        flex-direction: column;
+        align-items: flex-start;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 200px;
+
+        background-color: transparent;
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.75s ease-out;
+    }
+
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+
+    .open-sidebar-btn, .close-sidebar-btn{
+        padding: 20px;
+        display: block;
+    }
+
+    #sidebar-active:checked ~ .links-container{
+        right: 0;
+    }
+
+    #sidebar-active:checked ~ .links-container:hover{
+        background-color: #800000;
+    }
+
+    #sidebar-active:checked ~ .open-sidebar-btn{
+        display: none;
+    }
+
+    #sidebar-active:checked ~ #overlay{
+        background-color: transparent;
+        backdrop-filter: blur(3px);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+
+    nav .btnLogin {
+        width: 6rem;
+        height: 2rem;
+        font-size: 0.9rem;
+        margin-left: 1rem;
+    }
+
+    .wrapper{
+        position: relative;
+        width: 400px;
+        height: 400px;
+        background: transparent;
+        border: 2px solid #DCAE96;
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transform: scale(0);
+        transition: transform .5s ease, height .2s ease;
+    }
+    
+    .wrapper.active-popup{
+        transform: scale(1);
+    }
+    
+    .wrapper.active{
+        height: 520px;
+    }
+    
+    .wrapper .form-box{
+        width: 100%;
+        padding: 40px;
+    }
+    
+    .wrapper .form-box.login{
+        transition: transform .18s ease;
+        transform: translateX(0);
+    }
+    
+    .wrapper.active .form-box.login{
+        transform: none;
+        transform: translateX(-400px);
+    }
+    
+    .wrapper .form-box.register{
+        position: absolute;
+        transition: none;
+        transform: translateX(400px);
+    }
+    
+    .wrapper.active .form-box.register{
+        transition: transform .18s ease;
+        transform: translateX(0);
+    }
+    
+    .wrapper .icon-close{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45px;
+        height: 45px;
+        background: #DCAE96;
+        font-size: 2em;
+        color: #800000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom-left-radius: 20px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+    .form-box  h2{
+        font-size: 2em;
+        color: #fff;
+        text-align: center;
+    }
+    
+    .input-box{
+        position: relative;
+        width: 100%;
+        height: 50px;
+        border-bottom: 2px solid #800000;
+        margin: 30px 0;
+    }
+    
+    .input-box label{
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        font-size: 1em;
+        color: #DCAE96;
+        font-weight: 500px;
+        pointer-events: none;
+        transition: .5s;
+    }
+    
+    .input-box input:focus~label,
+    .input-box input:valid~label{
+        top: -5px;
+    }
+    
+    .input-box input{
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 1em;
+        color: #fff;
+        font-weight: 150;
+        padding: 0 35px 0 5px;
+    }
+    
+    .input-box .icon{
+        position: absolute;
+        right: 8px;
+        font-size: 1.2em;
+        color: #800000;
+        line-height: 57px;
+    }
+    
+    .remember-forgot{
+        font-size: .9em;
+        color: #DCAE96;
+        font-weight: 500;
+        margin: -15px 0 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .remember-forgot label input{
+        accent-color: #800000;
+        margin-right: 3px;
+    }
+    
+    .remember-forgot a{
+        color: #800000;
+        text-decoration: none;
+    }
+    
+    .remember-forgot a:hover{
+        text-decoration: underline;
+    }
+    
+    .btn{
+        width: 100%;
+        height: 45px;
+        background: #800000;
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1em;
+        color: #fff;
+        font-weight: 500;
+    }
+    
+    .btn:hover{
+        background: #AE0000;
+    }
+    
+    .btn:active{
+        background: #DC0000;
+    }
+    
+    .login-register{
+        font-size: .9em;
+        color: #DCAE96;
+        text-align: center;
+        font-weight: 500;
+        margin: 25px 0 10px;
+    }
+    
+    .login-register p a{
+        color: #800000;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    
+    .login-register p a:hover{
+        text-decoration: underline;
+    }
+}
+
+
+
+const wrapper = document.querySelector('.wrapper');
+const loginLink = document.querySelector('.login-link');
+const registerLink = document.querySelector('.register-link');
+const iconClose = document.querySelector('.icon-close');
+
+document.addEventListener('DOMContentLoaded', () => {
+    wrapper.classList.add('active-popup');
+})
+
+registerLink.addEventListener('click', () => {
+    wrapper.classList.add('active');
+});
+
+loginLink.addEventListener('click', () => {
+    wrapper.classList.remove('active');
+});
+
+iconClose.addEventListener('click', () => {
+    wrapper.classList.remove('active-popup');
+});
+
+
+
