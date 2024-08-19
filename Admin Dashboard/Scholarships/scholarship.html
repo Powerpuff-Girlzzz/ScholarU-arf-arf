@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship</title>
+    <link rel="stylesheet" href="scholarship.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <!--LEFT SECTION-->
+
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                    <h2>Admin <span class="danger">Dashboard</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/Dashboard/adminDash.html">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="/Applicant/applicant.html">
+                    <span class="material-icons-sharp">person</span>
+                    <h3>Applicants</h3>
+                </a>
+
+                <a href="/Accepted/accepted.html">
+                    <span class="material-icons-sharp">how_to_reg</span>
+                    <h3>Accepted Applicants</h3>
+                </a>
+
+                <a href="/Rejected/rejected.html">
+                    <span class="material-icons-sharp">person_remove</span>
+                    <h3>Rejected Applicants</h3>
+                </a>
+
+                <a href="/Scholarships/scholarship.html" class="active">
+                    <span class="material-icons-sharp">school</span>
+                    <h3>Scholarships</h3>
+                </a>
+
+                <a href="/Message/message.html">
+                    <span class="material-icons-sharp">chat</span>
+                    <h3>Messages</h3>
+                    <span class="message-count">30</span>
+                </a>
+
+                <a href="/Profile/profile.html">
+                    <span class="material-icons-sharp">manage_accounts</span>
+                    <h3>Profile Settings</h3>
+                </a>
+
+                <a href="/Form/form.html">
+                    <span class="material-icons-sharp">note_add</span>
+                    <h3>Add Scholarship</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!--END OF LEFT SECTION-->
+
+        <!--MIDDLE TOP SECTION-->
+
+        <main>
+            <h1>Scholarship Dashboard</h1>
+
+            <div class="search">
+                <label>
+                    <input type="search" placeholder="Search here">
+                    <span class="material-icons-sharp">search</span>
+                </label>
+            </div>
+
+            <div class="recent-application">
+                <h2>Posted Scholarships</h2>
+            </div>
+            <!--END OF MIDDLE TOP SECTION-->
+
+            <!--CARDS-->
+
+            <div class="card">
+                <div class="applied">
+                    <h2 class="title" contenteditable="false">Tarlac State University Scholarship</h2>
+                    <p class="description" contenteditable="false">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Molestiae, est dolorum...</p>
+                    <div class="midlle">
+                        <div class="left">
+                            <ul class="requirements" contenteditable="false">
+                                <h3>Requirements</h3>
+                                <li>Certificate of Registration</li>
+                                <li>Report of Grades</li>
+                                <li>Good Moral</li>
+                                <li>Photocopy of I.D</li>
+                            </ul>
+                        </div>
+                        <div class="progress">
+                            <button onclick="toggleEdit(this)">Edit</button>
+                        </div>
+                    </div>
+                    <div class="small-container">
+                        <small class="text-muted">Posted about an hour ago</small>
+                        <small class="edited text-muted"></small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="applied">
+                    <h2 class="title" contenteditable="false">CHED Scholarship Program</h2>
+                    <p class="description" contenteditable="false">Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Quibusdam enim magnam nam tempora, optio ullam, dolor sit molestiae neque aliquam
+                        reprehenderit hic, voluptatem eum sint doloremque earum voluptas alias numquam!</p>
+                    <div class="midlle">
+                        <div class="left">
+                            <ul class="requirements" contenteditable="false">
+                                <h3>Requirements</h3>
+                                <li>Application Form</li>
+                                <li>Transcript of Records</li>
+                                <li>Recommendation Letter</li>
+                                <li>I.D</li>
+                            </ul>
+                        </div>
+                        <div class="progress">
+                            <button onclick="toggleEdit(this)">Edit</button>
+                        </div>
+                    </div>
+                    <div class="small-container">
+                        <small class="text-muted">Posted about 2 hours ago</small>
+                        <small class="edited text-muted"></small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="applied">
+                    <h2 class="title" contenteditable="false">DOST Scholarship Program</h2>
+                    <p class="description" contenteditable="false">Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Quibusdam enim magnam nam tempora, optio ullam, dolor sit molestiae neque aliquam
+                        reprehenderit hic, voluptatem eum sint doloremque earum voluptas alias numquam!</p>
+                    <div class="midlle">
+                        <div class="left">
+                            <ul class="requirements" contenteditable="false">
+                                <h3>Requirements</h3>
+                                <li>Application Form</li>
+                                <li>Transcript of Records</li>
+                                <li>I.D</li>
+                            </ul>
+                        </div>
+                        <div class="progress">
+                            <button onclick="toggleEdit(this)">Edit</button>
+                        </div>
+                    </div>
+                    <div class="small-container">
+                        <small class="text-muted">Posted about 2 hours ago</small>
+                        <small class="edited text-muted"></small>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--PAGINATION-->
+            <div class="pagination">
+                <button type="button" class="prev"><a href="#">
+                        <span class="material-icons-sharp">arrow_back_ios</span>
+                    </a></button>
+                <ul class="ul">
+                    <!--
+                    <li><a href="#" class="page_number">1</a></li>
+                    <li><a href="#" class="page_number">2</a></li>
+                    <li><a href="#" class="page_number">3</a></li>
+                    <li><a href="#" class="page_number">4</a></li>
+                    <li><a href="#" class="page_number">5</a></li>-->
+                </ul>
+                <button type="button" class="next"><a href="#">
+                        <span class="material-icons-sharp">arrow_forward_ios</span>
+                    </a></button>
+            </div>
+
+        </main>
+        <!--END OF MIDDLE SECTION-->
+
+        <!--RIGHT TOP SECTION-->
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hello, <b>Johnny</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="johnny.jpeg" alt="profile photo" onclick="toggleMenu()">
+                    </div>
+                </div>
+            </div>
+            <!--END OF RIGHT TOP SECTION-->
+
+            <!--PROFILE DROP-DOWN MENU-->
+
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="johnny.jpeg" alt="profile">
+                        <h3>Johnny Webb</h3>
+                    </div>
+                    <a href="#" class="sub-menu-link">
+                        <img src="security.png" alt="edit">
+                        <p>Security & Privacy</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="help.png" alt="help">
+                        <p>Help & Support</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="logout.png" alt="logout">
+                        <p>Logout</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+
+            <script src="scholarship.js"></script>
+</body>
+
+</html>

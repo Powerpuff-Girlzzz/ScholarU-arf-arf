@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Dashboard</title>
+    <link rel="stylesheet" href="applicant.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+</head>
+
+<body>
+    <div id="overlay"></div>
+    <div class="container">
+        <!--LEFT TOP SECTION-->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                    <h2>Admin <span class="danger">Dashboard</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/Dashboard/adminDash.html">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="/Applicant/applicant.html" class="active">
+                    <span class="material-icons-sharp">person</span>
+                    <h3>Applicants</h3>
+                </a>
+
+                <a href="/Accepted/accepted.html">
+                    <span class="material-icons-sharp">how_to_reg</span>
+                    <h3>Accepted Applicants</h3>
+                </a>
+
+                <a href="/Rejected/rejected.html">
+                    <span class="material-icons-sharp">person_remove</span>
+                    <h3>Rejected Applicants</h3>
+                </a>
+
+                <a href="/Scholarships/scholarship.html">
+                    <span class="material-icons-sharp">school</span>
+                    <h3>Scholarships</h3>
+                </a>
+
+                <a href="/Message/message.html">
+                    <span class="material-icons-sharp">chat</span>
+                    <h3>Messages</h3>
+                    <span class="message-count">30</span>
+                </a>
+
+                <a href="/Profile/profile.html">
+                    <span class="material-icons-sharp">manage_accounts</span>
+                    <h3>Profile Settings</h3>
+                </a>
+
+                <a href="/Form/form.html">
+                    <span class="material-icons-sharp">note_add</span>
+                    <h3>Add Scholarship</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!--END OF LEFT TOP SECTION-->
+
+        <!--MIDDLE TOP SECTION-->
+
+        <main>
+            <h1>Applicants</h1>
+
+            <div class="search">
+                <label>
+                    <input type="search" placeholder="Search here">
+                    <span class="material-icons-sharp">search</span>
+                </label>
+            </div>
+
+            <!--End of top midlle section-->
+
+            <!--MIDDLE SECTION-->
+
+            <div class="applied-recently">
+                <h2>Applied Recently</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student Name
+                            </th>
+                            <th>Student Age
+                                <select>
+                                    <option value="opt">Choose an Age</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26+">26+</option>
+                                </select>
+                            </th>
+                            <th>Student Year
+                                <select>
+                                    <option value="opt">Select Year</option>
+                                    <option value="1st">1st yr</option>
+                                    <option value="1st">2nd yr</option>
+                                    <option value="1st">3rd yr</option>
+                                    <option value="1st">4th yr</option>
+                                    <option value="1st">5th yr</option>
+                                </select>
+                            </th>
+                            <th>Date Applied
+                                <select>
+                                    <option value="opt">Select Month</option>
+                                    <option value="Jan">January</option>
+                                    <option value="Feb">February</option>
+                                    <option value="March">March</option>
+                                    <option value="April">April</option>
+                                    <option value="May">May</option>
+                                    <option value="June">June</option>
+                                    <option value="Jul">July</option>
+                                    <option value="Aug">August</option>
+                                    <option value="Sept">September</option>
+                                    <option value="Oct">October</option>
+                                    <option value="November">November</option>
+                                    <option value="Dec">December</option>
+                                </select>
+                            </th>
+                            <th class="primary"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+        </main>
+        <!--END OF MIDDLE SECTION-->
+
+        <!--RIGHT TOP SECTION-->
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hello, <b>Johnny</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="johnny.jpeg" alt="profile photo">
+                    </div>
+                </div>
+            </div>
+
+            <!--PROFILE SETTINGS DROP-DOWN MENU-->
+
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="johnny.jpeg" alt="profile">
+                        <h3>Johnny Webb</h3>
+                    </div>
+                    <a href="#" class="sub-menu-link">
+                        <img src="security.png" alt="edit">
+                        <p>Security & Privacy</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="help.png" alt="help">
+                        <p>Help & Support</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="logout.png" alt="logout">
+                        <p>Logout</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+            <!--END OF PROFILE DROP-DOWN MENU-->
+        </div>
+        <!--END OF RIGHT SECTION-->
+        <!--POP-UP CONTAINER-->
+        <div class="view-applicants-wrap" id="popup">
+            <div class="applicant-top">
+                <div class="close" id="close-btn-popup">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+                <img src="lebron.jpg" alt="profile">
+            </div>
+            <div class="applicants-info" id="main-content">
+
+                <h3 id="studName">Student Name: </h3>
+                <p>Juan Dela Cruz</p>
+
+
+                <h3 id="studAge">Student Age: </h3>
+                <p>23</p>
+
+
+                <h3 id="studContactNum">Contact Number: </h3>
+                <p>09221282191</p>
+
+
+                <h3 id="emailAdd">Email Address: </h3>
+                <p>emailAdd@gmail.com</p>
+
+
+                <h3 id="eligibility">Eligibility: </h3>
+                <p class="success">Eligible</p>
+
+                <a href="#" class="sub-requirements" id="clickToView">Click to View Submitted Requirements</a>
+            </div>
+            <div class="view-requirements" id="requirements-popup">
+                <div class="view-top">
+                    <span class="material-icons-sharp" id="back-arrow">arrow_back</span>
+                </div>
+                <div class="requirements-info">
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>Certificate of Registration</li>
+                        <li>2x2 Picture</li>
+                        <li>Certificate of Indigency</li>
+                        <li>Good Moral</li>
+                    </ul>
+                </div>
+                <div class="submitted-requirements">
+                    <h3>Submitted Requirements</h3>
+                    <ul>
+                        <li><a href="#" class="success">Certificate of Registration</a></li>
+                        <li><a href="#" class="success">2x2 Picture</a></li>
+                        <li><a href="#" class="danger">Certificate of Indigency</a></li>
+                        <li><a href="#" class="success">Good Moral</a></li>
+                    </ul>
+                </div>
+                <div class="requirements-bottom">
+                    <small class="text-muted">Total Requirements: 4</small>
+                    <small class="text-muted">Submitted Requirements: 3</small>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button class="accept">Accept</button>
+                <button class="reject">Reject</button>
+            </div>
+        </div>
+        <!--END OF POP-UP CONTAINER-->
+    </div>
+    <!--END OF CONTAINER-->
+
+
+
+
+    <script src="applications.js"></script>
+    <script src="applicant.js"></script>
+</body>
+
+</html>
