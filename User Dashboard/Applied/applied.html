@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applied</title>
+    <link rel="stylesheet" href="applied.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+</head>
+
+<body>
+    <div class="overlay" id="overlay"></div>
+    <div class="container">
+        <!--LEFT SIDE PART-->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                    <h2>User <span class="danger">Dashboard</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/Dashboard/userDash.html">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="/Scholarships/scholarship.html">
+                    <span class="material-icons-sharp">school</span>
+                    <h3>Scholarships</h3>
+                </a>
+
+                <a href="/Applied/applied.html" class="active">
+                    <span class="material-icons-sharp">hourglass_full</span>
+                    <h3>Applied Scholarships</h3>
+                </a>
+
+                <a href="/Accepted/accepted.html">
+                    <span class="material-icons-sharp">check</span>
+                    <h3>Accepted Scholarships</h3>
+                </a>
+
+                <a href="/Rejected/rejected.html">
+                    <span class="material-icons-sharp">close</span>
+                    <h3>Rejected Scholarships</h3>
+                </a>
+
+                <a href="/Removed/removed.html">
+                    <span class="material-icons-sharp">block</span>
+                    <h3>Removed Scholarships</h3>
+                </a>
+
+                <a href="/Messages/userMsg.html">
+                    <span class="material-icons-sharp">chat</span>
+                    <h3>Messages</h3>
+                    <span class="message-count">24</span>
+                </a>
+
+                <a href="/Profile/userProfile.html">
+                    <span class="material-icons-sharp">manage_accounts</span>
+                    <h3>Profile Settings</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <!--TOP MIDDLE SECTION-->
+        <main>
+            <h1>Applied</h1>
+
+            <div class="search">
+                <label>
+                    <input type="search" placeholder="Search here">
+                    <span class="material-icons-sharp">search</span>
+                </label>
+            </div>
+            <!--End of top midlle section-->
+
+            <!--MIDDLE SECTION-->
+
+            <div class="applied-scholarships">
+                <h2>Applied Scholarships</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Scholarship Title</th>
+                            <th>Deadline</th>
+                            <th>Eligibility Status</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+        </main>
+        <!--END OF MIDDLE SECTION-->
+
+        <!--RIGHT TOP SECTION-->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hello, <b>Johnny</b></p>
+                        <small class="text-muted">User</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="johnny.jpeg" alt="profile photo" onclick="toggleMenu()">
+                    </div>
+                </div>
+            </div>
+
+            <!--DROP-DOWN MENU FOR PROFILE-->
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="johnny.jpeg" alt="profile">
+                        <h3>Johnny Webb</h3>
+                    </div>
+                    <a href="#" class="sub-menu-link">
+                        <img src="security.png" alt="edit">
+                        <p>Security & Privacy</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="help.png" alt="help">
+                        <p>Help & Support</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="logout.png" alt="logout">
+                        <p>Logout</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+            <!--END OF RIGHT-TOP SECTION-->
+        </div>
+    </div>
+    <!--END OF CONTAINER-->
+    <!--POP-UP CONTAINER-->
+    <div class="details-wrapper">
+        <div class="top">
+            <span class="material-icons-sharp active" id="closeBtn-popup">close</span>
+        </div>
+        <div class="middle">
+            <h2>Palawan Pawn Shop Scholarship Program</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe tempore temporibus veritatis voluptates
+                delectus iure itaque voluptate sequi unde eligendi sapiente repudiandae, eius consequatur in corporis
+                voluptatum reprehenderit modi quas!</p>
+            <div class="requirements">
+                <div class="primary-requirements">
+                    <h3>Requirements: </h3>
+                    <ul>
+                        <li>Good Moral</li>
+                        <li>Certificate of Registration</li>
+                        <li>Photocopy of I.D</li>
+                    </ul>
+                </div>
+                <div class="sub-requirements">
+                    <h3>Submitted Requirements: </h3>
+                    <ul>
+                        <li><a href="#" class="success">Good Moral</a></li>
+                        <li><a href="#" class="success">Certificate of Registration</a></li>
+                        <li><a href="#" class="success">Photocopy of I.D</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <span class="material-icons-sharp active">info</span>
+            <small class="text-muted">You have already <b class="warning">APPLIED</b> in this program. Please wait for
+                further update.</small>
+        </div>
+    </div>
+    <script src="applications.js"></script>
+    <script src="applied.js"></script>
+</body>
+
+</html>

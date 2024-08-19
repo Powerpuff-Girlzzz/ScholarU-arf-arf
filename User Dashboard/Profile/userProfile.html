@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Porfile</title>
+    <link rel="stylesheet" href="userProfile.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!--LEFT SECTION-->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                    <h2>User <span class="danger">Dashboard</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/Dashboard/userDash.html">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="/Scholarships/scholarship.html">
+                    <span class="material-icons-sharp">school</span>
+                    <h3>Scholarships</h3>
+                </a>
+
+                <a href="/Applied/applied.html">
+                    <span class="material-icons-sharp">hourglass_full</span>
+                    <h3>Applied Scholarships</h3>
+                </a>
+
+                <a href="/Accepted/accepted.html">
+                    <span class="material-icons-sharp">check</span>
+                    <h3>Accepted Scholarships</h3>
+                </a>
+
+                <a href="/Rejected/rejected.html">
+                    <span class="material-icons-sharp">close</span>
+                    <h3>Rejected Scholarships</h3>
+                </a>
+
+                <a href="/Removed/removed.html">
+                    <span class="material-icons-sharp">block</span>
+                    <h3>Removed Scholarships</h3>
+                </a>
+
+                <a href="/Messages/userMsg.html">
+                    <span class="material-icons-sharp">chat</span>
+                    <h3>Messages</h3>
+                    <span class="message-count">30</span>
+                </a>
+
+                <a href="/Profile/userProfile.html" class="active">
+                    <span class="material-icons-sharp">manage_accounts</span>
+                    <h3>Profile Settings</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!--END OF LEFT SECTION-->
+
+        <main>
+            <!--MIDDLE TOP SECTION-->
+            <h1>Profile</h1>
+            <div class="search">
+                <label for="search">
+                    <input type="search" placeholder="Search here" id="search">
+                    <span class="material-icons-sharp">search</span>
+                </label>
+            </div>
+            <!--END OF MIDDLE TOP SECTION-->
+
+            <!--MIDDLE SECTION-->
+
+            <div class="recent-application">
+                <h2>Edit your Profile</h2>
+
+            </div>
+            <!--Form-->
+            <div class="form">
+                <div class="form-wrapper">
+                    <form action="#">
+                        <div class="user-img">
+                            <img src="johnny.jpeg" id="photo">
+                            <input type="file" id="file" accept=".png, .jpeg, .svg">
+                            <label for="file" id="uploadBtn">
+                                <span class="material-icons-sharp">add_a_photo</span>
+                            </label>
+                        </div>
+                        <h2>Personal</h2>
+                        <label for="fname">
+                            <h3>First Name: </h3>
+                        </label>
+                        <input type="text" id="fname" placeholder="Edit your First Name">
+
+                        <label for="lname">
+                            <h3>Last Name: </h3>
+                        </label>
+                        <input type="text" id="lname" placeholder="Edit your Last Name">
+
+                        <h2>Contact</h2>
+                        <label for="contactNum">
+                            <h3>Contact Number: </h3>
+                        </label>
+                        <input type="tel" placeholder="Edit your Contact Number" id="contactNum"
+                            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+
+                        <h2>Account</h2>
+                        <label for="username">
+                            <h3>Username: </h3>
+                        </label>
+                        <input type="text" id="username" placeholder="Edit your Username">
+
+                        <label for="password">
+                            <h3>Password: </h3>
+                        </label>
+                        <input type="password" id="password" placeholder="Enter your new Password">
+
+                        <label for="confirmPword">
+                            <h3>Confirm Password: </h3>
+                        </label>
+                        <input type="password" id="confirmPword" placeholder="Confirm Password">
+
+                        <label for="email">
+                            <h3>Email: </h3>
+                        </label>
+                        <input type="email" id="email" required placeholder="Edit you email here">
+
+                        <h2>School</h2>
+                        <label for="college">
+                            <h3>College Department: </h3>
+                            <input type="text" id="college" placeholder="Enter College Department">
+                        </label>
+
+                        <label for="year">
+                            <h3>School Year: </h3>
+                            <input type="text" id="year" placeholder="Enter current year level">
+                        </label>
+
+                        <label for="course">
+                            <h3>Course: </h3>
+                            <input type="text" id="course" placeholder="Enter your course">
+                        </label>
+
+                        <label for="gwa">
+                            <h3>General Weighted Average: </h3>
+                            <input type="number" min="0" id="gwa"
+                                placeholder="Enter your General Weighted Average (GWA)">
+                        </label>
+
+                        <h2>Upload Files</h2>
+                        <div class="fileUpload">
+                            <label for="rog">
+                                <h3>ROG: </h3>
+                                <input type="file" id="rog" accept=".pdf">
+                            </label>
+
+                            <label for="cor">
+                                <h3>COR: </h3>
+                                <input type="file" id="cor" accept=".pdf">
+                            </label>
+                        </div>
+
+                        <div class="btn">
+                            <button type="reset" class="clear">Clear</button>
+                            <button type="submit" class="update">Update</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+
+        </main>
+        <!--END OF FORM-->
+
+
+        <!--START OF RIGHT SECTION-->
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hello, <b>Johnny</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="johnny.jpeg" alt="profile photo" onclick="toggleMenu()">
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="johnny.jpeg" alt="profile">
+                        <h3>Johnny Webb</h3>
+                    </div>
+                    <a href="#" class="sub-menu-link">
+                        <img src="security.png" alt="edit">
+                        <p>Security & Privacy</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="help.png" alt="help">
+                        <p>Help & Support</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="logout.png" alt="logout">
+                        <p>Logout</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+
+            <script src="userProfile.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="userDash.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+</head>
+
+<body>
+    <div class="overlay" id="overlay"></div>
+    <div class="container">
+        <!--LEFT SIDE PART-->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                    <h2>User <span class="danger">Dashboard</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/Dashboard/userDash.html" class="active">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="/Scholarships/scholarship.html">
+                    <span class="material-icons-sharp">school</span>
+                    <h3>Scholarships</h3>
+                </a>
+
+                <a href="/Applied/applied.html">
+                    <span class="material-icons-sharp">hourglass_full</span>
+                    <h3>Applied Scholarships</h3>
+                </a>
+
+                <a href="/Accepted/accepted.html">
+                    <span class="material-icons-sharp">check</span>
+                    <h3>Accepted Scholarships</h3>
+                </a>
+
+                <a href="/Rejected/rejected.html">
+                    <span class="material-icons-sharp">close</span>
+                    <h3>Rejected Scholarships</h3>
+                </a>
+
+                <a href="/Removed/removed.html">
+                    <span class="material-icons-sharp">block</span>
+                    <h3>Removed Scholarships</h3>
+                </a>
+
+                <a href="/Messages/userMsg.html">
+                    <span class="material-icons-sharp">chat</span>
+                    <h3>Messages</h3>
+                    <span class="message-count">24</span>
+                </a>
+
+                <a href="/Profile/userProfile.html">
+                    <span class="material-icons-sharp">manage_accounts</span>
+                    <h3>Profile Settings</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <!--TOP MIDDLE SECTION-->
+        <main>
+            <h1>Dashboard</h1>
+
+            <div class="search">
+                <label>
+                    <input type="search" placeholder="Search here">
+                    <span class="material-icons-sharp">search</span>
+                </label>
+            </div>
+            <!--CARDS-->
+            <div class="insights">
+                <div class="applied">
+                    <span class="material-icons-sharp">approval</span>
+                    <div class="midlle">
+                        <div class="left">
+                            <h3>Applied Scholarships</h3>
+                        </div>
+                        <div class="progress">
+                            <div class="number">
+                                <h1>10</h1>
+                                <small class="text-muted">/20</small>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">This week</small>
+                </div>
+                <!--CARD 1 END-->
+
+                <!--CARD 2-->
+                <div class="accepted">
+                    <span class="material-icons-sharp">thumb_up</span>
+                    <div class="midlle">
+                        <div class="left">
+                            <h3>Accepted</h3>
+                        </div>
+                        <div class="progress">
+                            <div class="number">
+                                <h1>5</h1>
+                                <small class="text-muted">/10</small>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">This week</small>
+                </div>
+                <!--CARD 2 END-->
+
+                <!--CARD 3-->
+
+                <div class="rejected">
+                    <span class="material-icons-sharp">thumb_down</span>
+                    <div class="midlle">
+                        <div class="left">
+                            <h3>Rejected</h3>
+                        </div>
+                        <div class="progress">
+                            <div class="number">
+                                <h1>1</h1>
+                                <small class="text-muted">/10</small>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">This week</small>
+                </div>
+                <!--CARD 3 END-->
+
+                <!--CARD 4-->
+
+                <div class="pending">
+                    <span class="material-icons-sharp">pending</span>
+                    <div class="midlle">
+                        <div class="left">
+                            <h3>Pending</h3>
+                        </div>
+                        <div class="progress">
+                            <div class="number">
+                                <h1>4</h1>
+                                <small class="text-muted">/10</small>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">This week</small>
+                </div>
+                <!--CARD 4 END-->
+            </div>
+            <!--End of top midlle section-->
+
+            <!--MIDDLE SECTION-->
+
+            <div class="recent-application">
+                <h2>Recent Scholarships</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Scholarship Title</th>
+                            <th>Deadline</th>
+                            <th>Eligibility Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+        </main>
+        <!--END OF MIDDLE SECTION-->
+
+        <!--RIGHT TOP SECTION-->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hello, <b>Johnny</b></p>
+                        <small class="text-muted">User</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="johnny.jpeg" alt="profile photo" onclick="toggleMenu()">
+                    </div>
+                </div>
+            </div>
+
+            <!--DROP-DOWN MENU FOR PROFILE-->
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="johnny.jpeg" alt="profile">
+                        <h3>Johnny Webb</h3>
+                    </div>
+                    <a href="#" class="sub-menu-link">
+                        <img src="security.png" alt="edit">
+                        <p>Security & Privacy</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="help.png" alt="help">
+                        <p>Help & Support</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="logout.png" alt="logout">
+                        <p>Logout</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+            <!--END OF RIGHT-TOP SECTION-->
+
+            <!--RIGHT MIDDLE SECTION-->
+
+            <!--RECENT UPDATES-->
+            <div class="recent-updates">
+                <h2>Notifications</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="user.png" alt="img">
+                        </div>
+                        <div class="message">
+                            <p><b>Admin</b> viewed your application</p>
+                            <small class="text-muted">1 hour ago</small>
+                        </div>
+                    </div>
+
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="user2.jpg" alt="img">
+                        </div>
+                        <div class="message">
+                            <p><b>Someone</b> sent you a message</p>
+                            <small class="text-muted">3 hours ago</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="johnny.jpeg" alt="img">
+                        </div>
+                        <div class="message">
+                            <p><b>You</b> have applied an scholarship</p>
+                            <small class="text-muted">2 days ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--END OF RECENT UPDATES-->
+
+            <!--APPLICATION ANALYTICS-->
+
+            <div class="profile-analytics">
+                <h2>Profile</h2>
+                <div class="item number">
+                    <div class="icon">
+                        <span class="material-icons-sharp">tag</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Student Number</h3>
+                            <small class="text-muted">2021435698</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item year">
+                    <div class="icon">
+                        <span class="material-icons-sharp">signal_cellular_alt</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Year Level</h3>
+                            <small class="text-muted">2nd Year</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item program">
+                    <div class="icon">
+                        <span class="material-icons-sharp">workspace_premium</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Program</h3>
+                            <small class="text-muted">Bachelor of Science in Information Systems</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--END OF APPLICATION ANALYTICS-->
+        </div>
+    </div>
+    <!--END OF CONTAINER-->
+
+    <!--POP-UP CONTAINER-->
+    <div class="details-wrapper">
+        <div class="top">
+            <span class="material-icons-sharp active" id="closeBtn-popup">close</span>
+        </div>
+        <div class="middle">
+            <h2>Palawan Pawn Shop Scholarship Program</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe tempore temporibus veritatis voluptates
+                delectus iure itaque voluptate sequi unde eligendi sapiente repudiandae, eius consequatur in corporis
+                voluptatum reprehenderit modi quas!</p>
+            <div class="requirements">
+                <div class="primary-requirements">
+                    <h3>Requirements: </h3>
+                    <ul>
+                        <li>Good Moral</li>
+                        <li>Certificate of Registration</li>
+                        <li>Photocopy of I.D</li>
+                    </ul>
+                </div>
+                <div class="status">
+                    <h3>Eligibility: </h3>
+                    <p class="success">Eligible</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <button type="submit" onclick="toggleForm()">Apply now</button>
+        </div>
+    </div>
+
+    <!--APPLY FORM-->
+    <div class="apply-form">
+        <div class="topRight">
+            <span class="material-icons-sharp" id="arwBack" onclick="toggleForm()">arrow_back</span>
+            <h3>Palawan Pawn Shop Scholarship Program</h3>
+        </div>
+        <div class="requirements">
+            <h4>Requirements: </h4>
+            <ul>
+                <li>Good Moral</li>
+                <li>Certificate of Registration</li>
+                <li>Photocopy of I.D</li>
+            </ul>
+        </div>
+        <div class="small-text">
+            <small class="text-muted">
+                <span class="material-icons-sharp">info</span> Submit requirements using the form below
+            </small>
+        </div>
+        <div class="row">
+            <div class="col">
+                <small class="text-muted">Type of file</small>
+                <label for="inputType">
+                    <select class="form-control" name="inputType" id="inputType">
+                        <option value="text">Text</option>
+                        <option value="number">Number</option>
+                        <option value="textarea">Text Area</option>
+                        <option value="file" accept="img/png, image/gif, image/jpeg">Image</option>
+                        <option value="file">File</option>
+                    </select>
+                </label>
+            </div>
+            <label for="labelValue">
+                <div class="col">
+                    <small class="text-muted">Name of File</small>
+                    <input type="text" name="labelValue" id="labelValue" placeholder="Assign a name of the File"
+                        class="form-control">
+            </label>
+        </div>
+    </div>
+    <div id="form">
+        <!-- Dynamically generated inputs will appear here -->
+    </div>
+    <div class="submit-btn">
+        <button id="submitForm" class="btn">Submit</button>
+    </div>
+    <script src="applications.js"></script>
+    <script src="userDash.js"></script>
+    <script src="userDashApplyForm.js"></script>
+</body>
+
+</html>
