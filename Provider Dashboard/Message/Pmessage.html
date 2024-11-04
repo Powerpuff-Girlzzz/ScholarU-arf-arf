@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <link rel="stylesheet" href="Pmessage.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <!--LEFT SECTION-->
+
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                    <h2>Admin <span class="danger">Dashboard</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+
+                <a href="/Message/message.html" class="active">
+                    <span class="material-icons-sharp">chat</span>
+                    <h3>Messages</h3>
+                    <span class="message-count">30</span>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!--END OF LEFT SECTION-->
+
+        <main>
+            <!--MIDDLE TOP SECTION-->
+            <h1>Messages</h1>
+            <!--END OF MIDDLE TOP SECTION-->
+
+            <!--CONTAINER FOR MESSAGES-->
+
+            <div class="container">
+                <div class="leftSide">
+                    <!--Header-->
+                    <div class="header">
+                        <div class="userimg">
+                            <img src="user.png" class="cover">
+                        </div>
+                        <ul class="nav_icons">
+                            <li><span class="material-icons-sharp">chat_bubble_outline</span></li>
+                            <li><span class="material-icons-sharp">more_vert</span></li>
+                        </ul>
+                    </div>
+                    <!--Search bar-->
+                    <div class="search_chat">
+                        <div>
+                            <input type="search" placeholder="Search or start a new chat">
+                            <span class="material-icons-sharp">search</span>
+                        </div>
+                    </div>
+                    <!--CHAT LISTS-->
+                    <div class="chatlist">
+                        <div class="block active">
+                            <div class="imgbx">
+                                <img src="user.png" class="cover">
+                            </div>
+                            <div class="details">
+                                <div class="listHead">
+                                    <h4>Admin</h4>
+                                    <p class="time text-muted">11:45</p>
+                                </div>
+
+                                <div class="message_p">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta accusantium culpa
+                                        quod at quasi pariatur aspernatur quam fuga facere facilis? Voluptatem,
+                                        recusandae. Enim animi mollitia, dignissimos quibusdam eveniet quis fugit.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block unread">
+                            <div class="imgbx">
+                                <img src="user2.jpg" class="cover">
+                            </div>
+                            <div class="details">
+                                <div class="listHead">
+                                    <h4>Admin</h4>
+                                    <p class="time text-muted">1:38</p>
+                                </div>
+                                <div class="message_p">
+                                    <p>Hello Provider</p>
+                                    <b>1</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--RIGHT SIDE OF THE CONTAINER-->
+                <div class="rightSide">
+                    <div class="header">
+                        <div class="imgText">
+                            <div class="userimg">
+                                <img src="user.png" class="cover">
+                            </div>
+                            <h4>Admin <br> <span class="text-muted">Online</span></h4>
+                        </div>
+                        <ul class="nav_icons">
+                            <li>
+                                <label for="text">
+                                    <input type="search" name="search" id="text">
+                                    <img src="search.png" alt="searchImg">
+                                </label>
+                            </li>
+                            <li><span class="material-icons-sharp">more_vert</span></li>
+                            <li><span class="material-icons-sharp back-button">arrow_back_ios</span></li>
+                        </ul>
+                    </div>
+                    <!--CHATBOX-->
+                    <div class="chatBox">
+                        <div class="message my_message">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo officia facilis ullam qui
+                                libero repudiandae! Deserunt fugit, molestias, qui, sunt sapiente odit fugiat vel
+                                deleniti nihil nobis dignissimos quaerat eos.<br><span>12:02</span></p>
+                        </div>
+
+                        <div class="message frnd_message">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nobis neque veritatis
+                                fugiat perspiciatis deleniti quidem accusamus, officia, eum ad sunt incidunt eaque
+                                reiciendis quaerat voluptatem explicabo voluptas. Illum, commodi. <br><span>12:02</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!--CHAT INPUT-->
+                    <div class="chatbox_input">
+                        <label for="fileInput">
+                            <span class="material-icons-sharp">attach_file</span>
+                        </label>
+                        <input type="file" name="fileInput" id="fileInput">
+                        <input type="text" placeholder="Type your message" id="messageInput">
+                        <span class="material-icons-sharp">send</span>
+                        <span class="material-icons-sharp">mic</span>
+                    </div>
+                </div>
+        </main>
+        <!--END OF CONTAINER FOR MESSAGES-->
+
+        <!--RIGHT TOP SECTION-->
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hello, <b>Lexi</b></p>
+                        <small class="text-muted">Provider</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="user2.jpg" alt="profile photo" onclick="toggleMenu()">
+                    </div>
+                </div>
+            </div>
+
+            <!--PROFILE DROP-DOWN MENU-->
+
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="user2.jpg" alt="profile">
+                        <h3>Provider Name</h3>
+                    </div>
+                    <a href="#" class="sub-menu-link">
+                        <img src="security.png" alt="edit">
+                        <p>Security & Privacy</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="help.png" alt="help">
+                        <p>Help & Support</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="logout.png" alt="logout">
+                        <p>Logout</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+
+            <script src="PchatScript.js"></script>
+            <script src="Pmessage.js"></script>
+</body>
+
+</html>
